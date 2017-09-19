@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Thuc Tap Android 1</string>
+    <string name="hello_message">Chao The Gioi</string>
+    <string name="ButtonText">Toi la button</string>
+    <string name="login">Dang Nhap</string>
+    <string name="login_name">Ten dang nhap</string>
+    <string name="password">Mat Ma</string>
+    <string name="radio_button">Nut an</string>
+    <string name="check_box">Danh dau</string>
+    <string name="switch_text">Cai nay lam gi?</string>
+</resources>
