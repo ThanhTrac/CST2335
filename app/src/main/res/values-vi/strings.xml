@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Thuc Tap Android 1</string>
+    <string name="app_name">Thuc Tap Android</string>
     <string name="hello_message">Chao The Gioi</string>
     <string name="ButtonText">Toi la button</string>
     <string name="login">Dang Nhap</string>
