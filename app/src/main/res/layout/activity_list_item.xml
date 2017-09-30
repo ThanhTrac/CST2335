@@ -18,10 +18,11 @@
     android:text="@string/radio_button" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/CBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
+        android:checked="false"
         android:gravity="fill"
         android:text="@string/check_box" />
 
@@ -34,10 +35,11 @@
         android:text="@string/switch_text" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:gravity="fill"
+        android:onClick="onClick"
         android:src="@android:drawable/ic_menu_camera" />
 </GridLayout>

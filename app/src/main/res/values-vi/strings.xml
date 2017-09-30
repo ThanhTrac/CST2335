@@ -9,4 +9,12 @@
     <string name="radio_button">Nut an</string>
     <string name="check_box">Danh dau</string>
     <string name="switch_text">Cai nay lam gi?</string>
+    <string name="login_button">Dang nhap</string>
+    <string name="dialog_message">Ban co muon hoan thanh phan nay?</string>
+    <string name="dialog_title">Alert</string>
+    <string name="ok">Dong y</string>
+    <string name="cancel">Khong dong y</string>
+    <string name="start_chart">Bat dau Chart</string>
 </resources>
+
+
