@@ -13,5 +13,6 @@
     <string name="dialog_title">Alert</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="start_chart">Start Chart</string>
+    <string name="start_chat">Start Chat</string>
+    <string name="button_send">Send</string>
 </resources>

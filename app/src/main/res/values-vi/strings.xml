@@ -14,7 +14,8 @@
     <string name="dialog_title">Alert</string>
     <string name="ok">Dong y</string>
     <string name="cancel">Khong dong y</string>
-    <string name="start_chart">Bat dau Chart</string>
+    <string name="start_chat">Bat dau Chat</string>
+    <string name="button_send">Goi di</string>
 </resources>
 
 
