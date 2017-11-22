@@ -14,6 +14,7 @@ public class StartActivity extends Activity {
 
     Button btn1;
     Button btnChart;
+    Button btnWeatherForeCast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,16 @@ public class StartActivity extends Activity {
         Log.i(ACTIVITY_NAME, "In onCreate()");
         btn1=(Button)findViewById(R.id.btn1);
         btnChart=(Button)findViewById(R.id.btnChart);
+        btnWeatherForeCast=(Button)findViewById(R.id.btnWeatherForecast);
+        btnWeatherForeCast.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, WeatherForecast.class);
+                startActivity(intent);
+            }
+        });
+
         btnChart.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -35,8 +46,10 @@ public class StartActivity extends Activity {
     public void clickHandler(View view) {
         Intent intent = new Intent(this, ListItemActivity.class);
         startActivityForResult(intent, 10);
-
     }
+
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
@@ -53,32 +66,32 @@ public class StartActivity extends Activity {
             @Override
     protected void onStart(){
         super.onStart();
-        Toast.makeText(this, "onStart", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onStart", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onStart()");
     }
 
     @Override
     protected void onResume(){
         super.onResume();
-        Toast.makeText(this, "onResume", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onResume", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onResume()");
     }
     @Override
     protected void onPause(){
         super.onPause();
-        Toast.makeText(this, "onPause", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onPause", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onPause()");
     }
     @Override
     protected void onStop(){
         super.onStop();
-        Toast.makeText(this, "onStop", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onStop", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onStop()");
     }
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
 
