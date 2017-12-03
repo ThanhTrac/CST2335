@@ -24,7 +24,7 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Toast.makeText(this, "onCreate", Toast.LENGTH_LONG ).show();
+        //Toast.makeText(this, "onCreate", Toast.LENGTH_LONG ).show();
         Log.i(ACTIVITY_NAME, "In onCreate()");
         btnLogin=(Button)findViewById(R.id.btnLogin);
         etEmail=(EditText)findViewById(R.id.etEmail);
@@ -48,31 +48,31 @@ public class LoginActivity extends Activity {
     @Override
     protected void onStart(){
         super.onStart();
-        Toast.makeText(this, "onStart", Toast.LENGTH_SHORT ).show();
+        //Toast.makeText(this, "onStart", Toast.LENGTH_SHORT ).show();
         Log.i(ACTIVITY_NAME, "In onStart()");
     }
     @Override
     protected void onResume(){
         super.onResume();
-        Toast.makeText(this, "onResume", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onResume", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onResume()");
     }
     @Override
     protected void onPause(){
         super.onPause();
-        Toast.makeText(this, "onPause", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onPause", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onPause()");
     }
     @Override
     protected void onStop(){
         super.onStop();
-        Toast.makeText(this, "onStop", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onStop", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onStop()");
     }
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
 

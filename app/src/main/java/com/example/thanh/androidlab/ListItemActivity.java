@@ -104,31 +104,31 @@ public class ListItemActivity extends Activity {
     @Override
     protected void onStart(){
         super.onStart();
-        Toast.makeText(this, "onStart", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onStart", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onStart()");
     }
     @Override
     protected void onResume(){
         super.onResume();
-        Toast.makeText(this, "onResume", Toast.LENGTH_SHORT ).show();
+        //Toast.makeText(this, "onResume", Toast.LENGTH_SHORT ).show();
         Log.i(ACTIVITY_NAME, "In onResume()");
     }
     @Override
     protected void onPause(){
         super.onPause();
-        Toast.makeText(this, "onPause", Toast.LENGTH_SHORT ).show();
+        //Toast.makeText(this, "onPause", Toast.LENGTH_SHORT ).show();
         Log.i(ACTIVITY_NAME, "In onPause()");
     }
     @Override
     protected void onStop(){
         super.onStop();
-        Toast.makeText(this, "onStop", Toast.LENGTH_SHORT  ).show();
+        //Toast.makeText(this, "onStop", Toast.LENGTH_SHORT  ).show();
         Log.i(ACTIVITY_NAME, "In onStop()");
     }
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT ).show();
+        //Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT ).show();
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
 

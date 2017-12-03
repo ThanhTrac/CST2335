@@ -7,19 +7,13 @@
     android:orientation="vertical"
     tools:context="com.example.thanh.androidlab.WeatherForecast">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/ivWeather"
             android:layout_width="200dp"
             android:layout_height="193dp"
             android:layout_marginTop="16dp"
@@ -35,29 +29,43 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvCurrent"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:text="@string/current_temperature" />
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/current_temperature"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                tools:text="@string/current_temperature" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tvMin"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:text="@string/min_temperature" />
+                android:layout_height="74dp"
+                android:gravity="center_vertical"
+                android:text="@string/min_temperature"
+                android:textSize="18sp"
+                tools:text="@string/min_temperature" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/tvMax"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:text="@string/max_temperature" />
+                android:gravity="center_vertical"
+                android:text="@string/max_temperature"
+                android:textSize="18sp"
+                tools:text="@string/max_temperature" />
 
         </LinearLayout>
 
     </LinearLayout>
 
     <ProgressBar
-        style="?android:attr/progressBarStyle"
+        android:id="@+id/pbWeather"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
 
 </LinearLayout>

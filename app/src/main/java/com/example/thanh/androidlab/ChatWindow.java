@@ -79,7 +79,7 @@ public class ChatWindow extends Activity {
 //                for (int i =0; i<cursor.getColumnCount(); i++ ){
 //                    cursor.getColumnName(i+1);
 //                }
-                 arrayList.add(editText.getText().toString());
+                arrayList.add(editText.getText().toString());
 
                 messageAdapter.notifyDataSetChanged();
                 editText.setText("");

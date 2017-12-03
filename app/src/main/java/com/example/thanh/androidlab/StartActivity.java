@@ -19,7 +19,7 @@ public class StartActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        Toast.makeText(this, "onCreate", Toast.LENGTH_LONG ).show();
+        //Toast.makeText(this, "onCreate", Toast.LENGTH_LONG ).show();
         Log.i(ACTIVITY_NAME, "In onCreate()");
         btn1=(Button)findViewById(R.id.btn1);
         btnChart=(Button)findViewById(R.id.btnChart);
