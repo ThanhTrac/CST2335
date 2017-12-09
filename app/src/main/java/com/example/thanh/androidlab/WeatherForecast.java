@@ -77,10 +77,10 @@ public class WeatherForecast extends Activity {
 
             // connecting to url and reading data input stream
             try {
-                /*URL url =new URL ("http://api.openweathermap.org/data/2.5/weather?q=ottawa," +
-                        "ca&APPID=7e943c97096a9784391a981c4d878b22&mode=xml&units=metric");*/
-                URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=ottawa," +
-                        "ca&APPID=d99666875e0e51521f0040a3d97d0f6a&mode=xml&units=metric");
+                URL url =new URL ("http://api.openweathermap.org/data/2.5/weather?q=ottawa," +
+                        "ca&APPID=7e943c97096a9784391a981c4d878b22&mode=xml&units=metric");
+                //URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=ottawa," +
+                //        "ca&APPID=d99666875e0e51521f0040a3d97d0f6a&mode=xml&units=metric");
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(10000); //in milliseconds
                 conn.setConnectTimeout(15000); //in millisenconds

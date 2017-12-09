@@ -1,6 +1,8 @@
 package com.example.thanh.androidlab;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -27,6 +29,7 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
             " ( " + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + KEY_MESSAGE + " TEXT); ";
 
+    private SQLiteDatabase database;
 
     public ChatDatabaseHelper(Context ctx) {
         super(ctx, DATABASE_NAME, null, VERSION_NUM);
@@ -43,6 +46,42 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
         Log.i("ChatDatabaseHelper", "Calling onUpgrade, oldVersion=" + oldVer + " newVersion=" + newVer);
+    }
+
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVer, int newVer) {
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        db.execSQL(CREATE_TABLE_MESSAGE);
+        Log.i("ChatDatabaseHelper","Calling onDowngrade, oldVersion=" + oldVer + "newVersion=" +newVer);
+    }
+
+    @Override
+    public void onOpen(SQLiteDatabase db) {
+        Log.i("Database ", "onOpen was called");
+    }
+
+    public void openDatabase() {
+        database = this.getWritableDatabase();
+    }
+
+    public void closeDatabase() {
+        if(database != null && database.isOpen()){
+            database.close();
+        }
+    }
+
+    public void insertEntry(String content) {
+        ContentValues values = new ContentValues();
+        values.put(KEY_MESSAGE, content);
+        database.insert(TABLE_NAME, null, values);
+    }
+
+    public void deleteItem(String id) {
+        this.getWritableDatabase().execSQL("DELETE FROM " + TABLE_NAME + " WHERE " + KEY_ID + " = " + id);
+    }
+
+    public Cursor getRecords() {
+        return database.query(TABLE_NAME, null, null, null, null, null, null);
     }
 
 
