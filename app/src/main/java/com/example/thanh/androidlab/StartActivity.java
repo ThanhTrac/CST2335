@@ -4,17 +4,19 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class StartActivity extends Activity {
+public class StartActivity extends AppCompatActivity {
     protected static final String ACTIVITY_NAME = "StartActivity";
 
     Button btn1;
-    Button btnChart;
+    Button btnChat;
     Button btnWeatherForeCast;
+    Button btnTestToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,8 +24,19 @@ public class StartActivity extends Activity {
         //Toast.makeText(this, "onCreate", Toast.LENGTH_LONG ).show();
         Log.i(ACTIVITY_NAME, "In onCreate()");
         btn1=(Button)findViewById(R.id.btn1);
-        btnChart=(Button)findViewById(R.id.btnChart);
+        btnChat=(Button)findViewById(R.id.btnChart);
         btnWeatherForeCast=(Button)findViewById(R.id.btnWeatherForecast);
+        btnTestToolbar=(Button)findViewById(R.id.btnTestToolbar);
+
+        btnTestToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(ACTIVITY_NAME, "User clicked toolbar");
+                Intent intent = new Intent(StartActivity.this, TestToolbar.class );
+                startActivityForResult(intent, 10);
+            }
+        });
+
         btnWeatherForeCast.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -33,7 +46,7 @@ public class StartActivity extends Activity {
             }
         });
 
-        btnChart.setOnClickListener(new View.OnClickListener(){
+        btnChat.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
              Log.i(ACTIVITY_NAME, "User clicked Start Chat");
